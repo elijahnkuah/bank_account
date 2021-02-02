@@ -1,9 +1,14 @@
 import pandas as pd
 import numpy as np
+pip install sklearn
+pip install matplotlib
 from sklearn.metrics import roc_auc_score, log_loss
 import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.model_selection import StratifiedKFold
+pip install xgboost
+pip intall catboost
+pip install lightgbm
 import xgboost as xgb
 import catboost as cat_
 import seaborn as sns
