@@ -1,9 +1,6 @@
+pip install pipreqs
 pip install --upgrade pip
-pip install sklearn
-pip install matplotlib
 pip install xgboost
 pip intall catboost
 pip install lightgbm
-pip install pandas
-pip install numpy
 pip install streamlit
