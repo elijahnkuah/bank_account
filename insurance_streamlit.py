@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+pip install sklearn
 from sklearn.metrics import roc_auc_score, log_loss
 import matplotlib.pyplot as plt
 import seaborn as sns
