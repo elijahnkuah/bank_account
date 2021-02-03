@@ -1,6 +1,0 @@
-pip install pipreqs
-pip install -U scikit-learn
-pip install xgboost
-pip intall catboost
-pip install lightgbm
-pip install streamlit
