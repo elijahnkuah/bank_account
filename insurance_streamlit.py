@@ -23,7 +23,7 @@ st.write("""# Predicting model to determine if a building will have an insurance
 st.sidebar.header("Data variables")
 # Import the train data
 train = pd.read_csv('train_data.csv')
-
+Submission = pd.read_csv('sample_submission.csv')
 # Import the test data
 test = pd.read_csv('test_data.csv')
 #Submission = pd.read_csv('SUPCOM_SampleSubmission.csv')
@@ -201,11 +201,12 @@ prob = pd.DataFrame(prob, columns=['Not_claimed', 'Claim'])
 
 prob1 = prob['Claim']
 
+Submission['Claim'] = prediction
 
 prediction_df = pd.DataFrame(prediction, columns=['Predict'])
-def filesdownload(df):
+def filesdownload(prediction):
     csv = df.to_csv(index=False)
     b64 = base64.b64encode(csv.encode()).decode() #string <-> convention
     href = f'<a href="data:file/csv;base64,{b64}" download="prediction_df.csv">Download Predicted CSV File</a>'
     return href
-st.markdown(filesdownload(prediction_df), unsafe_allow_html=True)
+st.markdown(filesdownload(prediction), unsafe_allow_html=True)
