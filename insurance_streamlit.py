@@ -103,8 +103,8 @@ st.write("""e.g, A=[1,2,3]; Now the ***maximum absolute number is 3***. divide e
 Also, B = [-4,2,1], the ***maximum absolute value is 4***. now B=[-1,0.5,0.25]""")
 st.markdown("Now with the values you have, check the maximum numbers in the above ***description*** and divide the maximum by your number ")
 def user_input_features():
-    Building_Dimension = st.sidebar.slider('Building Dimension', 0.000033, 1.0, 0.059137)
-    Building_Type = st.sidebar.slider('Building_Type', 0.250000, 1.0, 0.559512)
+    Building_Dimension = st.sidebar.slider('Building Dimension', 10, 20, 1)
+    Building_Type = st.sidebar.slider('Building_Type', 1, 20, 1)
     Date_of_Occupancy = st.sidebar.slider('Date_of_Occupancy', 0.766369, 1.0,0.974733)
     Insured_Period = st.sidebar.slider('Insured_Period', 0.000000, 1.0, 0.913672)
     NumberOfWindows = st.sidebar.slider('NumberOfWindows', 0.000, 1.0, 0.187799)
