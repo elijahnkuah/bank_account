@@ -1,4 +1,4 @@
-pip install --upgrade streamlit
+#pip install --upgrade streamlit
 import pandas as pd
 import numpy as np
 from sklearn.metrics import roc_auc_score, log_loss
