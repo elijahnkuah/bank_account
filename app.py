@@ -194,7 +194,7 @@ Steps_to_follow ="""
 		<ul>
 	</div>
 	"""
-@st.cache
+#@st.cache
 def load_image(img):
 	im =Image.open(os.path.join(img))
 	return im
