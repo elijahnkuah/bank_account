@@ -195,25 +195,23 @@ Steps_to_follow ="""
 	</div>
 	"""
 #@st.cache
-def load_image(img):
-	im =Image.open(os.path.join(img))
-	return im
+#def load_image(img):
+#image =Image.open(os.path.join(img))
+#	return im
 	
-st.set_option('deprecation.showPyplotGlobalUse', False)
+#st.set_option('deprecation.showPyplotGlobalUse', False)
 
-def change_avatar(sex):
-	if sex == "male":
-		avatar_img = 'img_avatar.png'
-	else:
-		avatar_img = 'img_avatar2.png'
-	return avatar_img
+#def change_avatar(sex):
+#	if sex == "male":
+#		avatar_img = 'img_avatar.png'
+#	else:
+#		avatar_img = 'img_avatar2.png'
+#	return avatar_img
 
 
 def main():
 	"""Prediction App for persons having bank account or not"""
-	st.image(load_image('images/bank_banner.PNG'))
-	#st.markdown(html_temp.format('royalblue'),unsafe_allow_html=True)
-
+	st.image(Image.open(os.path.join("images/bank_banner.PNG")))
 	menu = ["Home","Login","Signup"]
 	submenu = ["Plot","Prediction","Metrics"]
 
@@ -222,10 +220,10 @@ def main():
 		st.header("Home")
 		st.markdown(descriptive_message_temp,unsafe_allow_html=True)
 		st.markdown(Steps_to_follow, unsafe_allow_html=True)
-		st.sidebar.image(load_image('images/LOGO.PNG'))
-
+		st.sidebar.image(Image.open(os.path.join('images/LOGO.PNG')))
 
 	elif choice == "Login":
+		st.sidebar.image(Image.open(os.path.join('images/LOGO.PNG')))
 		username = st.sidebar.text_input("Username")
 		password = st.sidebar.text_input("Password",type='password')
 		if st.sidebar.checkbox("Login"):
@@ -235,9 +233,9 @@ def main():
 			# if password == "12345":
 			if result:
 				st.success("Welcome {} to Bank Account Prediction App".format(username))
-				st.image(load_image('images/welcome.PNG'))
+				st.image(Image.open(os.path.join('images/welcome.PNG')))
 				activity = st.selectbox("Activity",submenu)
-				st.sidebar.image(load_image('images/LOGO.PNG'))
+				st.sidebar.image(Image.open(os.path.join('images/LOGO.PNG')))
 				if activity == "Plot":
 					st.subheader("Data Visualisation")
 					df = pd.read_csv("data/Train.csv")
@@ -340,7 +338,7 @@ def main():
 
     
 	elif choice == "Signup":
-		st.sidebar.image(load_image('images/LOGO.PNG'))
+		st.sidebar.image(Image.open(os.path.join('images/LOGO.PNG')))
 		new_username = st.text_input("User Name")
 		new_password = st.text_input("Password", type='password')
 		confirmed_password = st.text_input("Confirm Password", type='password')
