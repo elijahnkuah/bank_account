@@ -211,7 +211,7 @@ Steps_to_follow ="""
 
 def main():
 	"""Prediction App for persons having bank account or not"""
-	st.image(Image.open(os.path.join("images/bank_banner.PNG")))
+	st.image(Image.open(os.path.join("images/bank_banner.png")))
 	menu = ["Home","Login","Signup"]
 	submenu = ["Plot","Prediction","Metrics"]
 
@@ -220,10 +220,10 @@ def main():
 		st.header("Home")
 		st.markdown(descriptive_message_temp,unsafe_allow_html=True)
 		st.markdown(Steps_to_follow, unsafe_allow_html=True)
-		st.sidebar.image(Image.open(os.path.join('images/LOGO.PNG')))
+		st.sidebar.image(Image.open(os.path.join('images/LOGO.png')))
 
 	elif choice == "Login":
-		st.sidebar.image(Image.open(os.path.join('images/LOGO.PNG')))
+		st.sidebar.image(Image.open(os.path.join('images/LOGO.png')))
 		username = st.sidebar.text_input("Username")
 		password = st.sidebar.text_input("Password",type='password')
 		if st.sidebar.checkbox("Login"):
@@ -233,9 +233,9 @@ def main():
 			# if password == "12345":
 			if result:
 				st.success("Welcome {} to Bank Account Prediction App".format(username))
-				st.image(Image.open(os.path.join('images/welcome.PNG')))
+				st.image(Image.open(os.path.join('images/welcome.png')))
 				activity = st.selectbox("Activity",submenu)
-				st.sidebar.image(Image.open(os.path.join('images/LOGO.PNG')))
+				st.sidebar.image(Image.open(os.path.join('images/LOGO.png')))
 				if activity == "Plot":
 					st.subheader("Data Visualisation")
 					df = pd.read_csv("data/Train.csv")
@@ -338,7 +338,7 @@ def main():
 
     
 	elif choice == "Signup":
-		st.sidebar.image(Image.open(os.path.join('images/LOGO.PNG')))
+		st.sidebar.image(Image.open(os.path.join('images/LOGO.png')))
 		new_username = st.text_input("User Name")
 		new_password = st.text_input("Password", type='password')
 		confirmed_password = st.text_input("Confirm Password", type='password')
