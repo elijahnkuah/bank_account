@@ -300,6 +300,7 @@ def main():
 							prediction = loaded_model.predict(single_sample)
 							pred_prob = loaded_model.predict_proba(single_sample)
 						else:
+							st.info("Note: The prediction by this model is opposite. So reverse it when you see the result. Still working on it. Sorry for an inconvenient")
 							loaded_model = load_model("models/xgb_model_2.pkl")
 							prediction = loaded_model.predict(single_sample)
 							pred_prob = loaded_model.predict_proba(single_sample)
